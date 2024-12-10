@@ -21,13 +21,13 @@ const ACCOUNT_ID = process.env.NEXT_PUBLIC_ACCOUNT_ID;
 const API_TOKEN = process.env.NEXT_PUBLIC_API_TOKEN;
 const CORS_PROXY_URL = process.env.NEXT_PUBLIC_CORS_PROXY_URL;
 
-// Update getAuthHeaders to include all necessary headers
+// Update getAuthHeaders to ensure all values are strings
 const getAuthHeaders = () => ({
-  'Authorization': `Bearer ${API_TOKEN}`,
+  'Authorization': `Bearer ${API_TOKEN || ''}`,
   'Content-Type': 'application/json',
   'Accept': 'application/json',
-  'CF-Account-ID': ACCOUNT_ID
-});
+  'CF-Account-ID': ACCOUNT_ID || ''
+} as const);
 
 // Add error boundary component
 const ErrorMessage = ({ message }: { message: string }) => (
