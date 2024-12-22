@@ -8,10 +8,15 @@ A modern web dashboard for managing Cloudflare D1 databases! ⚡
 - ✅ Dark Mode Interface
 - ✅ Real-time Updates
 
-<div align="center" style="display: flex; gap: 10px;">
-  <img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="780" style="max-width: 49%;"/>
-  <img src="screenshots/pic1.png" alt="FlareBase Table View" width="780" style="max-width: 49%;"/>
-</div>
+## 📸 Screenshots
+
+**Database Overview**
+<img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="780" style="margin-bottom: 20px;"/>
+View all your D1 databases, metrics, and performance at a glance.
+
+**Table Management**
+<img src="screenshots/pic1.png" alt="FlareBase Table View" width="780" style="margin-bottom: 20px;"/>
+Execute queries, manage tables, and view data with our modern interface.
 
 ## 🔥 Fast Deploy
 1. Fork this repository
@@ -63,6 +68,13 @@ Your D1 dashboard will be live at:
 ```
 https://your-project.pages.dev
 ```
+
+## 📝 Todo & Notes
+- Initially started as a simple JavaScript project for easy copy-paste deployment
+- Zero dependency approach didn't work smoothly and became too complex
+- Switched to TypeScript/Nextjs to make things actually work
+- Current code is concentrated in `page.tsx` (will be refactored in future updates)
+- Planning to split components and improve code organization
 
 ## 📞 Contact
 - GitHub: [@malithonline](https://github.com/malithonline)
