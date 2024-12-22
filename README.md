@@ -11,18 +11,16 @@ A modern web dashboard for managing Cloudflare D1 databases! ⚡
 ## 📸 Screenshots
 
 ### Database Overview
-<img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="780" align="left" style="margin-bottom: 10px;"/>
-
-View all your D1 databases, metrics, and performance at a glance.
-
-<br clear="left"/>
+<div style="margin-bottom: 30px;">
+  <img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="780"/>
+  <p>View all your D1 databases, metrics, and performance at a glance.</p>
+</div>
 
 ### Table Management
-<img src="screenshots/pic1.png" alt="FlareBase Table View" width="780" align="left" style="margin-bottom: 10px;"/>
-
-Execute queries, manage tables, and view data with our modern interface.
-
-<br clear="left"/>
+<div style="margin-bottom: 30px;">
+  <img src="screenshots/pic1.png" alt="FlareBase Table View" width="780"/>
+  <p>Execute queries, manage tables, and view data with our modern interface.</p>
+</div>
 
 ## 🔥 Fast Deploy
 1. Fork this repository
