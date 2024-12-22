@@ -1,12 +1,28 @@
 {
-  "name": "d1-admin",
+  "name": "flarebase-expo-d1",
   "version": "0.1.0",
+  "description": "🚀 Cloudflare D1 Database Admin Dashboard ⚡ Modern interface with zero setup required 💫",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "keywords": [
+    "cloudflare",
+    "cloudflare-d1",
+    "cloudflare-pages",
+    "d1-database",
+    "database-admin",
+    "dashboard",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "Malith Madhuwantha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malithonline/flareBaseExpoD1"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
