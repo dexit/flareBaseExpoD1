@@ -9,8 +9,8 @@ A modern web dashboard for managing Cloudflare D1 databases! ⚡
 - ✅ Real-time Updates
 
 <div align="center" style="display: flex; gap: 10px;">
-  <img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="400" style="max-width: 48%;"/>
-  <img src="screenshots/pic1.png" alt="FlareBase Table View" width="400" style="max-width: 48%;"/>
+  <img src="screenshots/pic0.png" alt="FlareBase Database Metrics" width="780" style="max-width: 49%;"/>
+  <img src="screenshots/pic1.png" alt="FlareBase Table View" width="780" style="max-width: 49%;"/>
 </div>
 
 ## 🔥 Fast Deploy
