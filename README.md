@@ -1,6 +1,11 @@
 # 🚀 FlareBase Expo D1
 A modern web dashboard for managing Cloudflare D1 databases! ⚡
 
+
+![Cloudflare](https://img.shields.io/badge/Cloudflare-D1-F38020?logo=cloudflare)
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript)
+
 ## ✨ Features
 - ✅ Execute SQL Queries
 - ✅ View Table Structures
