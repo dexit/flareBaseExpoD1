@@ -52,10 +52,76 @@ Workers Scripts: Read & Write
 ### 3️⃣ CORS Worker
 1. Go to Workers & Pages
 2. Create new Worker
-3. Paste code:
+3. Just Paste code:
 ```js
-// CORS Worker Code
-bla bla code
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  // Handle CORS preflight requests
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization, CF-Account-ID',
+      }
+    })
+  }
+
+  try {
+    const url = new URL(request.url)
+    const cfAccountId = request.headers.get('CF-Account-ID')
+    const authToken = request.headers.get('Authorization')
+
+    // Base Cloudflare API URL
+    const baseApiUrl = `https://api.cloudflare.com/client/v4/accounts/${cfAccountId}/d1`
+
+    let response
+
+    if (url.pathname === '/databases') {
+      // List databases
+      response = await fetch(`${baseApiUrl}/database`, {
+        headers: {
+          'Authorization': authToken,
+          'Content-Type': 'application/json'
+        }
+      })
+    } else if (url.pathname === '/query') {
+      // Handle database queries
+      const { dbId, sql } = await request.json()
+      response = await fetch(`${baseApiUrl}/database/${dbId}/query`, {
+        method: 'POST',
+        headers: {
+          'Authorization': authToken,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ sql })
+      })
+    } else {
+      return new Response('Not Found', { status: 404 })
+    }
+
+    const data = await response.json()
+
+    // Return response with CORS headers
+    return new Response(JSON.stringify(data), {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
+  }
+}
 ```
 4. Deploy and copy worker URL
 
